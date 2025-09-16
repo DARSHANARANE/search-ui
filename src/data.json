@@ -1,0 +1,9 @@
+[
+  { "type": "person","status":"available",  "name": "Randall Johnsson", "details": "Active now" },
+  { "type": "folder", "name": "Random Michal Folder", "details": "12 Files • Edited 12m ago" },
+  { "type": "image", "name": "crative_file_frandkies.jpg","url":"#", "details": "in Photos/Assets • Edited 12m ago" },
+  { "type": "person", "name": "Kristinge Karand", "details": "Active 2d ago" },
+  { "type": "video", "name": "files_krande_michelle.avi", "details": "in Videos • Added 12m ago" },
+  { "type": "chats", "name": "Chat with Michelle", "details": "Last message 5m ago" },
+  { "type": "list", "name": "Project Tasks", "details": "10 items • Updated 1h ago" }
+]

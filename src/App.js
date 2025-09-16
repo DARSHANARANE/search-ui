@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import data from "./data.json";
+import SearchBar from "./components/SearchBar";
+import SearchResults from "./components/SearchResults";
 
 function App() {
+  const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [filtered, setFiltered] = useState([]);
+
+  useEffect(() => {
+    if (!query) {
+      setFiltered([]);
+      setLoading(false);
+      return;
+    }
+    setLoading(true);
+    const handler = setTimeout(() => {
+      setFiltered(
+        data.filter((item) =>
+          item.name.toLowerCase().includes(query.toLowerCase())
+        )
+      );
+      setLoading(false);
+    }, 800);
+    return () => clearTimeout(handler);
+  }, [query]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center min-h-screen bg-gray-100 p-10 justify-center">
+      <div  className="bg-white rounded-2xl shadow-lg w-full max-w-lg">
+        <SearchBar query={query} setQuery={setQuery} loading={loading} />
+        <SearchResults results={filtered} query={query} loading={loading} />
+      </div>
     </div>
   );
 }
