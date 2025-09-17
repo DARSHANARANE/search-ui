@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100 p-10 justify-center">
-      <div  className="bg-white rounded-2xl shadow-lg w-full max-w-lg">
+      <div className="bg-white rounded-2xl shadow-lg w-full max-w-lg">
         <SearchBar query={query} setQuery={setQuery} loading={loading} />
         <SearchResults results={filtered} query={query} loading={loading} />
       </div>

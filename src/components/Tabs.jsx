@@ -1,5 +1,4 @@
 import React from "react";
-import { FaCog, FaUserCircle, FaPaperclip } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { SlPaperClip } from "react-icons/sl";

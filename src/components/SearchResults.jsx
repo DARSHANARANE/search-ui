@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SkeletonResult from "./SkeletonResult";
-import { FaUserCircle, FaFolder, FaFileImage, FaFileVideo } from "react-icons/fa";
+import { FaUserCircle, FaFolder, FaFileImage } from "react-icons/fa";
 import Tabs from "./Tabs";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { BsChatSquare } from "react-icons/bs";
